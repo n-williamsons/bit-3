@@ -1,0 +1,14 @@
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}

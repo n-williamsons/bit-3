@@ -1,0 +1,24 @@
+
+  <div class="container-country">
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ country.flags.png }}" height="400px" width="400px" class="img-fluid rounded-start" alt="{{ country.name.common }} flag">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="card-title">
+            <h5 class="card-title"> {{ country.name.common }}</h5>
+            </div>
+            <p class="card-text"> <strong>Capital:</strong> {{ country.capital }}</p>
+            <p class="card-text"> <strong>Population:</strong> {{country.population | number:'1.0-2'}} habitants.</p>
+            <p class="card-text"> <strong>Currencies:</strong> {{ getCurrencyText(country.currencies) }}</p>
+            <p class="card-text"> <strong>Oficial Language:</strong> {{ getLanguagesList(country.languages) }}</p>
+            <p class="card-text"> <strong>Maps:</strong> <a [href]="country.maps.googleMaps" target="_blank">  Google Maps</a></p>
+            <p class="card-text"> <strong>Navigation:</strong>  <a [href]="country.maps.openStreetMaps" target="_blank"> OpenStreetMaps</a></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

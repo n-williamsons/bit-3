@@ -1,0 +1,7 @@
+
+
+.container {
+  background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

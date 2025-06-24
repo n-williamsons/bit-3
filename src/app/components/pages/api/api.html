@@ -1,0 +1,24 @@
+<h1> COUNTRIES INFORMATION </h1>
+<p> This API provides information about countries, including their flags, capitals, and populations.</p>
+
+<div class="btn-container">
+<button type="button" (click)="fetchCountries()"> Fetch Countries</button>
+</div>
+
+<div class="container">
+@defer{
+  <div class="card-container">
+    @for (country of countries; track $index){
+      <div class="card" style="width: 18rem;">
+        <img src="{{country.flags.png}}" class="card-img-top" alt="{{country.name.common}}">
+        <div class="card-body">
+          <h5 class="card-title">{{country.name.common}}</h5>
+          <p class="card-text"><strong>Capital:</strong> {{country.capital[0]}}</p>
+          <p class="card-text"><strong>Population:</strong> {{country.population | number:'1.0-2'}} habitants. </p>
+          <a href="/country/{{country.name.common}}" class="btn btn-primary">+ Info</a>
+        </div>
+      </div>
+    }
+  </div>
+}
+</div>
